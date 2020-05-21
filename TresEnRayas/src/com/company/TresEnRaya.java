@@ -6,10 +6,14 @@ public class TresEnRaya {
     Scanner scanner = new Scanner(System.in);
 
     static Tablero tablero = new Tablero();
+    static InterfazDeUsario interfazDeUsario = new InterfazDeUsario();
+    static int filaFicha;
+    static int columnaFicha;
 
-    String turno;
+    static String turno;
     private boolean exit;
     private boolean ganador;
+
 
     public void iniciarJuego() {
         turno = " X ";
@@ -33,45 +37,14 @@ public class TresEnRaya {
         }
     }
 
-  /*  private void crearTablero() {
-        // Defino el tamaño del tablero
-        tablero.tablero = new String[tablero.filas][tablero.columas];
-
-        // Relleno el tablero
-        tablero.rellenarTablero(tablero);
-    }*/
 
 
     private void rellenarTablero() {
-        Scanner scanner = new Scanner(System.in);
-        // Turno
-        System.out.println("---------------");
-        System.out.println("Turno de : " + turno);
-        System.out.println("---------------");
-
-        // Fila y columna de donde quiere colocar la ficha
-        System.out.print("Dime la posicion de la fila de donde quieres colocar la ficha: ");
-        int filaFicha = scanner.nextInt();
-        System.out.print("Dime la posicion de la columna de donde quieres colocar la ficha: ");
-        int columnaFicha = scanner.nextInt();
-        System.out.println("");
-
-        // Siempre que la posicion no este ocupada, guardo la ficha
-        if (tablero.tablero[filaFicha - 1][columnaFicha - 1] == " _ ") {
-            tablero.tablero[filaFicha - 1][columnaFicha - 1] = turno;
-
-        } else {
-            System.out.println("ERROR! La posicion ya esta ocupada.");
-        }
-
-        // Imprimo el tablero
-        for (int i = 0; i < tablero.filas; i++) {
-            for (int j = 0; j < tablero.columas; j++) {
-                System.out.print(tablero.tablero[i][j]);
-            }
-            System.out.println("");
-        }
+        interfazDeUsario.pedirFicha();
+        tablero.colocarFicha();
+        tablero.mostrarTablero();
     }
+
 
 
     private void comprobarGanador() {
@@ -147,11 +120,13 @@ public class TresEnRaya {
     }
 
 
+
     private void cambioTurno() {
         // Cambio el turno
         if (turno.equals(" X ")) turno = " O ";
         else turno = " X ";
     }
+
 
 
     private void volverAJugar() {
