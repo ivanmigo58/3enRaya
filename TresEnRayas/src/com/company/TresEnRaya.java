@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class TresEnRaya {
     Scanner scanner = new Scanner(System.in);
 
-    static Tablero tablero = new Tablero();
-    static InterfazDeUsario interfazDeUsario = new InterfazDeUsario();
-    static int filaFicha;
-    static int columnaFicha;
+    static Tablero tablero = new Tablero(3 , 3);
+    static InterfazDeUsuario interfazDeUsario = new InterfazDeUsuario();
+    /*static int filaFicha;
+    static int columnaFicha;*/
 
-    static String turno;
+    public String turno;
     private boolean exit;
     private boolean ganador;
 
+    Ficha ficha = new Ficha();
 
     public void iniciarJuego() {
         turno = " X ";
@@ -40,8 +41,11 @@ public class TresEnRaya {
 
 
     private void rellenarTablero() {
-        interfazDeUsario.pedirFicha();
-        tablero.colocarFicha();
+        interfazDeUsario.mostrarTurno(turno);
+        int fila = ficha.pedirFila();
+        int columna = ficha.pedirColumna();
+        System.out.println("");
+        tablero.colocarFicha(fila, columna, turno);
         tablero.mostrarTablero();
     }
 

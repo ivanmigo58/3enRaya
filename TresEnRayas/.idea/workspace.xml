@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de45ba11-3c7e-4403-ab63-66ee2023c645" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/InterfazDeUsario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Ficha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TresEnRayas/com/company/InterfazDeUsario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TresEnRayas/com/company/Tablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TresEnRayas/com/company/Tablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TresEnRayas/com/company/TresEnRaya.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TresEnRayas/com/company/TresEnRaya.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InterfazDeUsario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/InterfazDeUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TresEnRaya.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TresEnRaya.java" afterDir="false" />
     </list>

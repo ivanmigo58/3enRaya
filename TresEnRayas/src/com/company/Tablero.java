@@ -2,8 +2,13 @@ package com.company;
 
 public class Tablero {
     String tablero[][];
-    int columas = 3;
-    int filas = 3;
+    int columas;
+    int filas;
+
+    public Tablero(int filas, int columnas) {
+        this.columas = columnas;
+        this.filas = filas;
+    }
 
     void rellenarTablero(Tablero tablero) {
         for (int i = 0; i < tablero.filas; i++) {
@@ -13,11 +18,10 @@ public class Tablero {
         }
     }
 
-    public void colocarFicha() {
+    public void colocarFicha(int fichaFila, int fichaColumna, String turno) {
         // Siempre que la posicion no este ocupada, guardo la ficha
-        if (tablero[TresEnRaya.filaFicha - 1][TresEnRaya.columnaFicha - 1] == " _ ") {
-            tablero[TresEnRaya.filaFicha - 1][TresEnRaya.columnaFicha - 1] = TresEnRaya.turno;
-
+        if (tablero[fichaFila - 1][fichaColumna - 1] == " _ ") {
+            tablero[fichaFila - 1][fichaColumna - 1] = turno;
         } else {
             System.out.println("ERROR! La posicion ya esta ocupada.");
         }
